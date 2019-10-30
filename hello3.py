@@ -1,2 +1,2 @@
 import hello2
-fun2()
+hello2.fun2()
