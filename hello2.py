@@ -1,6 +1,5 @@
 import hello 
-
-x = input("x\n")
-y = input("y\n")
-
-hello.fun(x,y)
+def fun2():
+    x = input("x\n")
+    y = input("y\n")
+    hello.fun(x,y)
