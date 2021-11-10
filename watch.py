@@ -8,7 +8,7 @@ def get_message():
     url = "https://www.ems.com.cn/apple/getMailNoRoutes"
 
     data = {
-        "mailNum": "EZ678295750CN"
+        "mailNum": "EZ341746550CN"
         }
 
     headers = {
@@ -32,7 +32,7 @@ def get_message():
     url_data["opreate_type"] = i["opreateType"]
     url_data["process"] = i["processingInstructions"]
     msg = str(url_data['optime'])+'\n'+url_data['opreate_type']+'\n'+url_data['process']
-    bark_Url = f"https://api.day.app/fNDe4yZko9tnRopxuXXXsT/{'apple watch 快递'}/{msg}"
+    bark_Url = f"https://api.day.app/cSUVV3HyLE5Fkw4Jx33EW8/{'iphone13 pro 快递'}/{msg}"
     requests.get(bark_Url)
     print((datetime.datetime.now()).strftime("%dd %H:%M:%S"))
 
