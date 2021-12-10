@@ -3,12 +3,22 @@ import datetime
 import requests
 
 
+def get_cookie():
+    url = "https://m.kuaidi100.com/result.jsp"
+    res = requests.get(url)
+    cookiejar = res.cookies
+    cookiedict = requests.utils.dict_from_cookiejar(cookiejar)
+    return cookiedict
+
+
 
 def get_message():
+    cookie = get_cookie()
+    
     url = "https://m.kuaidi100.com/query"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
-        "Cookie": "csrftoken=dWbSdIkipfja3EilDuGRecAYQtsJP3QVLbQhyUvN2NA; WWWID=WWWB8870091F52FA59F771F801FE5040595",
+        "Cookie": f"csrftoken={cookie['csrftoken']}; WWWID={cookie['WWWID']}",
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
     }
     data = {
