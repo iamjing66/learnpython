@@ -25,7 +25,7 @@ def get_message():
     order = res["nu"]
     last_time = res["data"][0]["time"]
     last_info = res["data"][0]["context"]
-    msg = f"订单号：{}\n最新时间：{}\n最新信息：{}".format(order, last_info, last_time)
+    msg = f"订单号: {order}\n最新时间: {last_time}\n最新信息: {last_info}"
     bark_Url = f"https://api.day.app/cSUVV3HyLE5Fkw4Jx33EW8/{'AirPods pro'}/{msg}"
     requests.get(bark_Url)
     print((datetime.datetime.now()).strftime("%dd %H:%M:%S"))
