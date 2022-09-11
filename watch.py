@@ -22,7 +22,7 @@ def get_message():
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
     }
     data = {
-        "postid": "JDX006601212979",
+        "postid": "JDX011037518700",
         "id": "1",
         "valicode": "",
         "temp": "0.4556408500954994",
@@ -36,7 +36,7 @@ def get_message():
     last_time = res["data"][0]["time"]
     last_info = res["data"][0]["context"]
     msg = f"订单号: {order}\n最新时间: {last_time}\n最新信息: {last_info}"
-    bark_Url = f"https://api.day.app/fNDe4yZko9tnRopxuXXXsT/{'AirPods pro'}/{msg}"
+    bark_Url = f"https://api.day.app/fNDe4yZko9tnRopxuXXXsT/{'刃9000K'}/{msg}"
     requests.get(bark_Url)
     print((datetime.datetime.now()).strftime("%dd %H:%M:%S"))
 
